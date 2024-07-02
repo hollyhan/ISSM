@@ -77,7 +77,7 @@ classdef love
 			self.pw_threshold=1e-3; %if relative variation across frequencies is smaller than this ratio, the post-widder transform for time-dependent love numbers is bypassed 
 			self.min_integration_steps=50;
 			self.max_integration_dr=1e4;
-			self.integration_scheme=1;
+			self.integration_scheme=2;
 			self.istemporal=0;
 			self.n_temporal_iterations=8;
 			self.time=[0]; %s
@@ -160,11 +160,15 @@ classdef love
 			md = checkfield(md,'fieldname','love.hypergeom_table1','NaN',1,'Inf',1,'numel',md.love.hypergeom_nz*md.love.hypergeom_nalpha);
 			md = checkfield(md,'fieldname','love.hypergeom_table2','NaN',1,'Inf',1,'numel',md.love.hypergeom_nz*md.love.hypergeom_nalpha);
 
+            if any(md.materials.rheologymodel==2) && md.love.hypergeom_nz <=1
+               error('EBM rheology requested but hypergeometric table has fewer than 2 frequency values')
+            end
+            
 			if md.love.istemporal==1
 				md = checkfield(md,'fieldname','love.n_temporal_iterations','NaN',1,'Inf',1,'numel',1,'>',0);
 				md = checkfield(md,'fieldname','love.time','NaN',1,'Inf',1,'numel',md.love.nfreq/2/md.love.n_temporal_iterations);
 			end
-			if md.love.sh_nmin<=1 & (md.love.forcing_type==1 || md.love.forcing_type==5 || md.love.forcing_type==9)
+			if md.love.sh_nmin<=1 && (md.love.forcing_type==1 || md.love.forcing_type==5 || md.love.forcing_type==9)
 				error(['Degree 1 not supported for forcing type ' num2str(md.love.forcing_type) '. Use sh_min>=2 for this kind of calculation.'])
 			end
 
