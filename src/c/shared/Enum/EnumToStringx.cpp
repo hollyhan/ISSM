@@ -269,6 +269,8 @@ const char* EnumToStringx(int en){
 		case HydrologyChannelSheetWidthEnum : return "HydrologyChannelSheetWidth";
 		case HydrologyEnglacialVoidRatioEnum : return "HydrologyEnglacialVoidRatio";
 		case HydrologyIschannelsEnum : return "HydrologyIschannels";
+		case HydrologyIsIncludeSheetThicknessEnum : return "HydrologyIsIncludeSheetThickness";
+		case HydrologyCreepOpenFlagEnum : return "HydrologyCreepOpenFlag";
 		case HydrologyIsTransitionEnum : return "HydrologyIsTransition";
 		case HydrologyIsWaterPressureArmaEnum : return "HydrologyIsWaterPressureArma";
 		case HydrologyMeltFlagEnum : return "HydrologyMeltFlag";
@@ -1595,12 +1597,15 @@ const char* EnumToStringx(int en){
 		case LoadsEnum : return "Loads";
 		case LoveAnalysisEnum : return "LoveAnalysis";
 		case LoveHfEnum : return "LoveHf";
+		case LoveHfiEnum : return "LoveHfi";
 		case LoveHtEnum : return "LoveHt";
 		case LoveKernelsImagEnum : return "LoveKernelsImag";
 		case LoveKernelsRealEnum : return "LoveKernelsReal";
 		case LoveKfEnum : return "LoveKf";
+		case LoveKfiEnum : return "LoveKfi";
 		case LoveKtEnum : return "LoveKt";
 		case LoveLfEnum : return "LoveLf";
+		case LoveLfiEnum : return "LoveLfi";
 		case LoveLtEnum : return "LoveLt";
 		case LoveTidalHtEnum : return "LoveTidalHt";
 		case LoveTidalKtEnum : return "LoveTidalKt";

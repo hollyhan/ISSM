@@ -267,6 +267,8 @@ syn keyword cConstant HydrologyCavitySpacingEnum
 syn keyword cConstant HydrologyChannelSheetWidthEnum
 syn keyword cConstant HydrologyEnglacialVoidRatioEnum
 syn keyword cConstant HydrologyIschannelsEnum
+syn keyword cConstant HydrologyIsIncludeSheetThicknessEnum
+syn keyword cConstant HydrologyCreepOpenFlagEnum
 syn keyword cConstant HydrologyIsTransitionEnum
 syn keyword cConstant HydrologyIsWaterPressureArmaEnum
 syn keyword cConstant HydrologyMeltFlagEnum
@@ -1593,12 +1595,15 @@ syn keyword cConstant LliboutryDuvalEnum
 syn keyword cConstant LoadsEnum
 syn keyword cConstant LoveAnalysisEnum
 syn keyword cConstant LoveHfEnum
+syn keyword cConstant LoveHfiEnum
 syn keyword cConstant LoveHtEnum
 syn keyword cConstant LoveKernelsImagEnum
 syn keyword cConstant LoveKernelsRealEnum
 syn keyword cConstant LoveKfEnum
+syn keyword cConstant LoveKfiEnum
 syn keyword cConstant LoveKtEnum
 syn keyword cConstant LoveLfEnum
+syn keyword cConstant LoveLfiEnum
 syn keyword cConstant LoveLtEnum
 syn keyword cConstant LoveTidalHtEnum
 syn keyword cConstant LoveTidalKtEnum
